@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
 
     // Function to update Fahrenheit input when Celsius input changes
     function updateFahrenheit() {
-        var celsius = parseFloat(celsiusInput.value);
+        var celsius = +celsiusInput.value;
         if (!isNaN(celsius)) {
             var fahrenheit = celsiusToFahrenheit(celsius);
             fahrenheitInput.value = fahrenheit.toFixed(2);
@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
 
     // Function to update Celsius input when Fahrenheit input changes
     function updateCelsius() {
-        var fahrenheit = parseFloat(fahrenheitInput.value);
+        var fahrenheit = +fahrenheitInput.value;
         if (!isNaN(fahrenheit)) {
             var celsius = fahrenheitToCelsius(fahrenheit);
             celsiusInput.value = celsius.toFixed(2);
